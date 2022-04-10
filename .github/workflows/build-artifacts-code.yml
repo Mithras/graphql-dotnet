@@ -26,20 +26,20 @@ jobs:
         uses: actions/setup-node@v3.1.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: yarn
-        run: yarn
-      - name: yarn docs2
-        working-directory: docs2
-        run: yarn
-      - name: yarn gatsby build
-        working-directory: docs2
-        run: yarn gatsby build
-      - name: Publish docs artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: Documentation
-          path: docs2/public/**
-          if-no-files-found: error
+#      - name: yarn
+#        run: yarn
+#      - name: yarn docs2
+#        working-directory: docs2
+#        run: yarn
+#      - name: yarn gatsby build
+#        working-directory: docs2
+#        run: yarn gatsby build
+#      - name: Publish docs artifacts
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: Documentation
+#          path: docs2/public/**
+#          if-no-files-found: error
       - name: Setup .NET Core 6.0 SDK
         uses: actions/setup-dotnet@v2
         with:
